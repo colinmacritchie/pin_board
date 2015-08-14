@@ -16,7 +16,7 @@ def create
 	@pin = Pin.new(pin_params)
 	
 	if @pin.save
-		redirect_to @pin, notice: "Succesfully created your pin."
+		redirect_to @pin, notice: "Succesfully created your pin!"
 	else
 		render 'new'
 	end
@@ -29,7 +29,7 @@ end
 def update
 
   if @pin.update(pin_params)
-    redirect_to @pin, notice: "Pin was succesfully updated"
+    redirect_to @pin, notice: "Your Pin was succesfully updated!"
 
   else
     render 'edit'
@@ -57,7 +57,9 @@ def pin_params
 end
 
 	def find_pin
+
 		@pin = Pin.find(params[:id])
+
 	end
 
 end
