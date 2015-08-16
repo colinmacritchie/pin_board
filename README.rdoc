@@ -7,5 +7,3 @@
 - navigate to the folder
 
 - run "rails s" and open on localhost:3000
-
-<tt>rake doc:app</tt>.
