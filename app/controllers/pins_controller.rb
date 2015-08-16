@@ -25,8 +25,8 @@ def create
 	end
 end
 
-#Method for Editing an exsisting pin.
-def edit
+#Method that calls the (views/edit.html.haml) file.
+ def edit
 
 end
 
