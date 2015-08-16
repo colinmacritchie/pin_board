@@ -1,2 +1,3 @@
-- @pins.each do |pin|
-  %h2= link_to pin.title, pin
+.col-md-4.col-md-offset-1
+  - @pins.each do |pin|
+    %h2= link_to pin.title, pin
