@@ -1,5 +1,6 @@
 class PinsController < ApplicationController
-	before_action :find_pin, only: [:show, :edit, :update, :destroy]
+	before_action :find_pin, only: [:show, :edit, :update, :destroy, :upvote]
+	before_action :authenticate_user!, except: [:index, :show]
 
 #Method for oredering pins by decending order.
 def index
@@ -47,6 +48,11 @@ def destroy
   @pin.destroy
   redirect_to root_path
 
+end
+
+def upvote
+	@pin.upvote_by current_user
+	redirect_to :back
 end
 
 #Method that shows the pin ie(views/pins/show.html.haml)
